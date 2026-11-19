@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SOUND | Artistas</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/artistas.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script src="js/artistas.js" defer></script>
+</head>
+
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <header class="header">
+
+        <a href="index.html" class="logo">
+            <span class="logo-small">STUDIO<br>CREATIVE</span>
+            <span class="logo-main">sound</span>
+        </a>
+
+        <nav class="nav">
+            <a href="index.html">INICIO</a>
+            <a href="artistas.html" class="activo">ARTISTAS</a>
+            <a href="musica.html">MÚSICA</a>
+            <a href="albumes.html">ÁLBUMES</a>
+            <a href="contacto.html">CONTACTO</a>
+            <a href="portfolio.html">PORTFOLIO</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- HERO CON CÍRCULOS -->
+        <section class="artistas-hero">
+
+            <div class="hero-titulo">
+                <span>THE SOUND GENERATION</span>
+                <h1>ARTISTAS QUE<br>HACEN HISTORIA.</h1>
+                <p>Voces únicas. Historias que inspiran. Música que conecta.</p>
+            </div>
+
+            <div class="circulos-artistas">
+
+                <div class="circulo circulo-amarillo">
+                    <span>DISCOVER<br>NEW<br>SOUNDS ↗</span>
+                </div>
+
+                <div class="circulo circulo-rosalia">
+                    <img src="imagenes/vinilo_rosalia.webp" alt="Rosalía">
+                </div>
+
+                <div class="circulo circulo-badbunny">
+                    <img src="imagenes/portadabadbunny.jpg" alt="Bad Bunny">
+                </div>
+
+                <div class="circulo circulo-verde">
+                    <span>SOUND<br>✳</span>
+                </div>
+
+            </div>
+
+            <div class="hero-footer">
+                <span>01 / THE ARTISTS</span>
+                <a href="#explorar-artistas">EXPLORAR ARTISTAS ↓</a>
+            </div>
+
+        </section>
+
+        <!-- ARTISTAS DESTACADOS -->
+        <section class="artistas-destacados">
+
+            <div class="seccion-titulo">
+                <span>THE SPOTLIGHT</span>
+                <h2>EN PRIMER PLANO ✳</h2>
+            </div>
+
+            <div class="destacados-grid">
+
+                <article class="destacado-card">
+                    <div class="destacado-imagen">
+                        <img src="imagenes/badbunny.jpg" alt="Bad Bunny">
+                    </div>
+                    <div class="destacado-texto">
+                        <span>01 / URBANO</span>
+                        <h3>BAD BUNNY</h3>
+                        <p>Una de las voces que transformó la música urbana.</p>
+                        <button data-artista="badbunny">CONOCER MÁS ↗</button>
+                    </div>
+                </article>
+
+                <article class="destacado-card">
+                    <div class="destacado-imagen">
+                        <img src="imagenes/vinilo_rosalia.webp" alt="Rosalía">
+                    </div>
+                    <div class="destacado-texto">
+                        <span>02 / POP</span>
+                        <h3>ROSALÍA</h3>
+                        <p>Una artista que combina tradición e innovación.</p>
+                        <button data-artista="rosalia">CONOCER MÁS ↗</button>
+                    </div>
+                </article>
+
+                <article class="destacado-card">
+                    <div class="destacado-imagen">
+                        <img src="imagenes/theweekend_vinilo.png" alt="The Weeknd">
+                    </div>
+                    <div class="destacado-texto">
+                        <span>03 / R&B</span>
+                        <h3>THE WEEKND</h3>
+                        <p>Un sonido que redefinió el pop contemporáneo.</p>
+                        <button data-artista="weeknd">CONOCER MÁS ↗</button>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- EXPLORAR -->
+        <section class="explorar-artistas" id="explorar-artistas">
+
+            <div class="seccion-titulo">
+                <span>FIND YOUR SOUND</span>
+                <h2>DESCUBRÍ TU PRÓXIMO ARTISTA FAVORITO.</h2>
+            </div>
+
+            <div class="filtros-artistas">
+
+                <input
+                    type="search"
+                    id="buscar-artista"
+                    placeholder="⌕ Buscar artistas..."
+                >
+
+                <div class="generos">
+                    <button class="genero activo" data-genero="Todos">TODOS</button>
+                    <button class="genero" data-genero="Pop">POP</button>
+                    <button class="genero" data-genero="Urbano">URBANO</button>
+                    <button class="genero" data-genero="R&B">R&B</button>
+                    <button class="genero" data-genero="Rock">ROCK</button>
+                </div>
+
+            </div>
+
+            <div class="artistas-catalogo" id="artistas-catalogo"></div>
+
+        </section>
+
+        <!-- BANNER FINAL -->
+        <section class="banner-artistas">
+
+            <span>ARTISTS · MUSIC · CULTURE</span>
+
+            <h2>LA MÚSICA TIENE<br>MIL HISTORIAS.</h2>
+
+            <p>Descubrí los sonidos que marcaron generaciones.</p>
+
+            <a href="musica.html" class="boton-artistas">
+                EXPLORAR MÚSICA →
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="logo footer-logo">
+            <span class="logo-small">STUDIO<br>CREATIVE</span>
+            <span class="logo-main">sound</span>
+        </div>
+
+        <p>ARTISTS · MUSIC · CULTURE</p>
+        <p>© SOUND — PROYECTO ACADÉMICO</p>
+    </footer>
+
+    <!-- VENTANA DE INFORMACIÓN -->
+    <dialog id="modal-artista" class="modal-artista"></dialog>
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOUND | Portfolio</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script src="js/portfolio.js" defer></script>
+</head>
+
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <header class="header">
+        <a href="index.html" class="logo">
+            <span class="logo-small">STUDIO<br>CREATIVE</span>
+            <span class="logo-main">sound</span>
+        </a>
+
+        <nav class="nav">
+            <a href="index.html">INICIO</a>
+            <a href="artistas.html">ARTISTAS</a>
+            <a href="musica.html">MÚSICA</a>
+            <a href="albumes.html">ÁLBUMES</a>
+            <a href="contacto.html">CONTACTO</a>
+            <a href="portfolio.html" class="activo">PORTFOLIO</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- PORTADA -->
+        <section class="portfolio-hero">
+            <span>CREATIVE STUDIO / SELECTED WORKS</span>
+
+            <h1>IDEAS QUE<br><em>COBRAN VIDA.</em></h1>
+
+            <p>
+                Un espacio para compartir mis proyectos,
+                explorar diferentes lenguajes visuales
+                y mostrar mi manera de entender el diseño.
+            </p>
+
+            <a href="#trabajos" class="boton-portfolio">
+                EXPLORAR PROYECTOS ↓
+            </a>
+
+            <div class="portfolio-decoracion">
+                <span>✳</span>
+                <span>DESIGN · CREATE · INSPIRE</span>
+                <span>✳</span>
+            </div>
+        </section>
+
+        <!-- GALERÍA -->
+        <section class="portfolio-galeria" id="trabajos">
+
+            <div class="portfolio-titulo">
+                <span>THE CREATIVE COLLECTION</span>
+                <h2>MIS TRABAJOS ✳</h2>
+                <p>Una selección de proyectos gráficos y digitales.</p>
+            </div>
+
+            <!-- FILTROS -->
+            <div class="portfolio-filtros">
+                <button class="filtro-portfolio activo" data-filtro="todos">TODOS</button>
+                <button class="filtro-portfolio" data-filtro="branding">BRANDING</button>
+                <button class="filtro-portfolio" data-filtro="packaging">PACKAGING</button>
+                <button class="filtro-portfolio" data-filtro="digital">DIGITAL</button>
+                <button class="filtro-portfolio" data-filtro="editorial">EDITORIAL</button>
+            </div>
+
+            <div class="portfolio-grid" id="portfolio-grid">
+
+                <button class="proyecto proyecto-grande" data-categoria="branding" data-titulo="Identidad visual">
+                    <img src="imagenes/proy1 (4).png" alt="Proyecto de identidad visual">
+                    <span class="proyecto-info">
+                        <small>01 / BRANDING</small>
+                        <strong>APP</strong>
+                        <span>VER PROYECTO ↗</span>
+                    </span>
+                </button>
+
+                <button class="proyecto" data-categoria="packaging" data-titulo="Spider-Shot">
+                    <img src="imagenes/3 (2).png" alt="Diseño de packaging Spider-Shot">
+                    <span class="proyecto-info">
+                        <small>02 / PACKAGING</small>
+                        <strong>SPIDER-SHOT</strong>
+                        <span>VER PROYECTO ↗</span>
+                    </span>
+                </button>
+
+                <button class="proyecto" data-categoria="editorial" data-titulo="Diseño editorial">
+                    <img src="imagenes/proy1 (1).png" alt="Proyecto editorial">
+                    <span class="proyecto-info">
+                        <small>03 / EDITORIAL</small>
+                        <strong>DISEÑO EDITORIAL</strong>
+                        <span>VER PROYECTO ↗</span>
+                    </span>
+                </button>
+
+                <button class="proyecto" data-categoria="digital" data-titulo="Diseño de aplicaciones">
+                    <img src="imagenes/proy1 (3).png" alt="Diseño de aplicaciones">
+                    <span class="proyecto-info">
+                        <small>04 / DIGITAL</small>
+                        <strong>PUBLICIDAD</strong>
+                        <span>VER PROYECTO ↗</span>
+                    </span>
+                </button>
+
+                <button class="proyecto proyecto-ancho" data-categoria="packaging" data-titulo="Diseño de producto">
+                    <img src="imagenes/proy1 (2).png" alt="Diseño de producto">
+                    <span class="proyecto-info">
+                        <small>05 / PACKAGING</small>
+                        <strong>DISEÑO DE PRODUCTO</strong>
+                        <span>VER PROYECTO ↗</span>
+                    </span>
+                </button>
+
+                <button class="proyecto" data-categoria="branding" data-titulo="Universo de marca">
+                    <img src="imagenes/3 (3).png" alt="Universo de marca">
+                    <span class="proyecto-info">
+                        <small>06 / BRANDING</small>
+                        <strong>UNIVERSO DE MARCA</strong>
+                        <span>VER PROYECTO ↗</span>
+                    </span>
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- CIERRE -->
+        <section class="portfolio-cierre">
+            <span>HAVE AN IDEA?</span>
+            <h2>HAGAMOS ALGO<br>CREATIVO JUNTOS.</h2>
+            <p>Las mejores ideas empiezan con una conversación.</p>
+            <a href="contacto.html" class="boton-portfolio">
+                CONTACTAME →
+            </a>
+        </section>
+
+    </main>
+
+    <!-- VISOR -->
+    <dialog id="visor-portfolio" class="visor-portfolio">
+        <button id="cerrar-portfolio" type="button" aria-label="Cerrar">✕</button>
+        <img id="imagen-portfolio" src="" alt="">
+        <h3 id="titulo-portfolio"></h3>
+    </dialog>
+
+
+<section class="instagram-seccion">
+
+    <div class="instagram-contenedor">
+
+        <div class="instagram-texto">
+            <span class="instagram-etiqueta">
+                FOLLOW THE CREATIVE SIDE ✳
+            </span>
+
+            <h2>SEGUÍ MI<br>
+                <em>MUNDO CREATIVO.</em>
+            </h2>
+
+            <p>
+                Descubrí más proyectos, procesos creativos,
+                diseños y nuevas ideas en mi Instagram.
+            </p>
+
+            <a href="https://www.instagram.com/portfolio_fdecesare/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="instagram-boton">
+                VER MI INSTAGRAM ↗
+            </a>
+
+            <p class="instagram-usuario">
+                @portfolio_fdecesare
+            </p>
+        </div>
+
+        <!-- CELULAR -->
+        <div class="instagram-celular-zona">
+
+            <div class="instagram-celular">
+
+                <div class="celular-camara"></div>
+
+                <div class="celular-pantalla">
+
+                    <div class="ig-barra">
+                        <span>9:41</span>
+                        <span>●●● ▰</span>
+                    </div>
+
+                    <div class="ig-encabezado">
+                        <strong>portfolio_fdecesare</strong>
+                        <span>☰</span>
+                    </div>
+
+                    <div class="ig-perfil">
+                        <div class="ig-avatar">✳</div>
+
+                        <div class="ig-estadisticas">
+                            <strong>PORTFOLIO</strong>
+                            <span>Diseño gráfico</span>
+                        </div>
+                    </div>
+
+                    <div class="ig-bio">
+                        <strong>Francesca | Diseño</strong>
+                        <p>Diseño gráfico · Creatividad · Ideas ✳</p>
+                        <p>Mis proyectos y exploraciones visuales.</p>
+                    </div>
+
+                    <a class="ig-seguir"
+                       href="https://www.instagram.com/portfolio_fdecesare/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Ver perfil en Instagram ↗
+                    </a>
+
+                    <div class="ig-pestanas">
+                        <span>▦</span>
+                        <span>◫</span>
+                        <span>♧</span>
+                    </div>
+
+                    <div class="ig-publicaciones">
+                        <img src="imagenes/3 (1).png" alt="Trabajo 1">
+                        <img src="imagenes/3 (2).png" alt="Trabajo 2">
+                        <img src="imagenes/3 (3).png" alt="Trabajo 3">
+                        <img src="imagenes/proy1 (1).png" alt="Trabajo 4">
+                        <img src="imagenes/proy1 (2).png" alt="Trabajo 5">
+                        <img src="imagenes/proy1 (3).png" alt="Trabajo 6">
+                    </div>
+
+                    <div class="ig-menu-inferior">
+                        <span>⌂</span>
+                        <span>⌕</span>
+                        <span>＋</span>
+                        <span>♡</span>
+                        <span>◉</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="instagram-estrella">✳</div>
+            <div class="instagram-circulo"></div>
+
+        </div>
+    </div>
+
+</section>
+
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="logo footer-logo">
+            <span class="logo-small">STUDIO<br>CREATIVE</span>
+            <span class="logo-main">sound</span>
+        </div>
+        <p>ARTISTS · MUSIC · CULTURE</p>
+        <p>© SOUND — PROYECTO ACADÉMICO</p>
+    </footer>
+
+</body>
+</html>

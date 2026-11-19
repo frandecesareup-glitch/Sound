@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SOUND | Contacto</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="js/contacto.js" defer></script>
+</head>
+
+<body>
+
+    <!-- MENÚ -->
+    <header class="header">
+
+        <a href="index.html" class="logo">
+            <span class="logo-small">STUDIO<br>CREATIVE</span>
+            <span class="logo-main">sound</span>
+        </a>
+
+        <nav class="nav">
+            <a href="index.html">INICIO</a>
+            <a href="artistas.html">ARTISTAS</a>
+            <a href="musica.html">MÚSICA</a>
+            <a href="albumes.html">ÁLBUMES</a>
+            <a href="contacto.html" class="activo">CONTACTO</a>
+            <a href="portfolio.html">PORTFOLIO</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="contacto-intro">
+            <span>LET'S CONNECT THROUGH MUSIC</span>
+            <h1>HABLEMOS DE MÚSICA.</h1>
+            <p>¿Tenés una consulta, una recomendación o simplemente querés compartir tu pasión por la música?</p>
+        </section>
+
+        <!-- FORMULARIO PRINCIPAL -->
+        <section class="contacto-seccion">
+
+            <div class="contacto-contenedor">
+
+                <!-- LADO IZQUIERDO -->
+                <div class="contacto-visual">
+
+                    <span class="visual-etiqueta">SOUND CULTURE / 005</span>
+
+                    <div class="nota-musical">
+                        <span>♫</span>
+                        <div class="circulo-decorativo circulo-uno"></div>
+                        <div class="circulo-decorativo circulo-dos"></div>
+                        <div class="estrella-decorativa">✳</div>
+                    </div>
+
+                    <div class="visual-texto">
+                        <h2>LET'S<br>CONNECT!</h2>
+                        <p>La música nos conecta. Tu voz también es parte de SOUND.</p>
+                    </div>
+
+                </div>
+
+                <!-- LADO DERECHO -->
+                <div class="contacto-formulario">
+
+                    <div class="formulario-encabezado">
+                        <span>GET IN TOUCH ✳</span>
+                        <h2>ESCRIBINOS.</h2>
+                        <p>Completá el formulario y contanos qué tenés en mente.</p>
+                    </div>
+
+                    <form id="formulario-contacto">
+
+                        <div class="campo">
+                            <label for="nombre">TU NOMBRE</label>
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                placeholder="¿Cómo te llamás?"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo">
+                            <label for="email">CORREO ELECTRÓNICO</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="tunombre@email.com"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo">
+                            <label for="asunto">¿SOBRE QUÉ QUERÉS HABLAR?</label>
+                            <select id="asunto" name="asunto" required>
+                                <option value="">Seleccioná una opción</option>
+                                <option value="Consulta general">Consulta general</option>
+                                <option value="Recomendación musical">Recomendación musical</option>
+                                <option value="Colaboración">Colaboración</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="mensaje">TU MENSAJE</label>
+                            <textarea
+                                id="mensaje"
+                                name="mensaje"
+                                rows="5"
+                                placeholder="Contanos lo que quieras..."
+                                required
+                            ></textarea>
+                        </div>
+
+                        <label class="aceptar">
+                            <input type="checkbox" id="acepto" required>
+                            <span>Acepto que se utilicen mis datos para responder esta consulta.</span>
+                        </label>
+
+                        <button type="submit" class="boton-enviar">
+                            ENVIAR MENSAJE ↗
+                        </button>
+
+                        <p id="respuesta-formulario" role="status"></p>
+
+                    </form>
+
+                    <div class="contacto-redes">
+                        <div class="linea-redes">
+                            <span>O ENCONTRANOS EN REDES</span>
+                        </div>
+
+                        <div class="redes-contacto">
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a>
+                            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TIKTOK ↗</a>
+                            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YOUTUBE ↗</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CIERRE -->
+        <section class="contacto-cierre">
+            <span>STAY CONNECTED</span>
+            <h2>LA MÚSICA ES MEJOR<br>CUANDO SE COMPARTE.</h2>
+            <a href="index.html" class="volver-inicio">VOLVER AL INICIO →</a>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="logo footer-logo">
+            <span class="logo-small">STUDIO<br>CREATIVE</span>
+            <span class="logo-main">sound</span>
+        </div>
+
+        <p>ARTISTS · MUSIC · CULTURE</p>
+        <p>© SOUND — PROYECTO ACADÉMICO</p>
+    </footer>
+
+</body>
+</html>
