@@ -1,0 +1,455 @@
+
+/* =============================
+   SOUND - ARTISTAS
+============================= */
+
+:root {
+    --beige: #dfbc9c;
+    --verde: #087d48;
+    --amarillo: #f7ed70;
+    --rojo: #ed3218;
+}
+
+body {
+    background: var(--beige);
+}
+
+button {
+    cursor: pointer;
+}
+
+/* HERO */
+
+.artistas-hero {
+    padding: 65px 7% 35px;
+    overflow: hidden;
+}
+
+.hero-titulo {
+    text-align: center;
+}
+
+.hero-titulo span,
+.seccion-titulo span {
+    color: var(--verde);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.hero-titulo h1 {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-size: clamp(45px, 6vw, 78px);
+    color: var(--rojo);
+    line-height: 1.05;
+    margin: 15px 0;
+}
+
+.hero-titulo p {
+    font-size: 15px;
+}
+
+/* CÍRCULOS SUPERPUESTOS */
+
+.circulos-artistas {
+    position: relative;
+    max-width: 1100px;
+    height: 430px;
+    margin: 40px auto 0;
+}
+
+.circulo {
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .3s;
+}
+
+.circulo:hover {
+    transform: translateY(-12px);
+}
+
+.circulo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(20%);
+}
+
+.circulo-amarillo {
+    left: 0;
+    top: 30px;
+    background: var(--amarillo);
+    color: var(--verde);
+    z-index: 1;
+}
+
+.circulo-amarillo span {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.05;
+    text-align: left;
+}
+
+.circulo-rosalia {
+    left: 23%;
+    top: 0;
+    z-index: 2;
+}
+
+.circulo-badbunny {
+    left: 46%;
+    top: 35px;
+    z-index: 3;
+}
+
+.circulo-verde {
+    right: 0;
+    top: 55px;
+    background: var(--verde);
+    color: var(--amarillo);
+    z-index: 4;
+}
+
+.circulo-verde span {
+    font-size: 45px;
+    font-weight: 900;
+    text-align: center;
+}
+
+/* HERO FOOTER */
+
+.hero-footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 0;
+    border-top: 2px solid var(--verde);
+    color: var(--verde);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.hero-footer a:hover {
+    color: var(--rojo);
+}
+
+/* DESTACADOS */
+
+.artistas-destacados {
+    background: var(--amarillo);
+    padding: 75px 7%;
+}
+
+.seccion-titulo {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.seccion-titulo h2 {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    color: var(--rojo);
+    font-size: clamp(30px, 4vw, 48px);
+    margin-top: 12px;
+}
+
+.destacados-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.destacado-card {
+    background: var(--verde);
+    border-radius: 20px;
+    overflow: hidden;
+    color: white;
+    transition: .3s;
+}
+
+.destacado-card:hover {
+    transform: translateY(-8px);
+}
+
+.destacado-imagen {
+    height: 250px;
+    overflow: hidden;
+}
+
+.destacado-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.destacado-card:hover img {
+    transform: scale(1.07);
+}
+
+.destacado-texto {
+    padding: 25px;
+}
+
+.destacado-texto span {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--amarillo);
+}
+
+.destacado-texto h3 {
+    font-size: 26px;
+    margin: 12px 0;
+}
+
+.destacado-texto p {
+    font-size: 13px;
+    line-height: 1.5;
+    min-height: 45px;
+}
+
+.destacado-texto button {
+    border: none;
+    background: var(--amarillo);
+    color: var(--verde);
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 11px;
+    margin-top: 20px;
+}
+
+/* EXPLORAR */
+
+.explorar-artistas {
+    padding: 80px 7%;
+}
+
+.filtros-artistas {
+    text-align: center;
+    margin: 30px auto;
+}
+
+#buscar-artista {
+    width: min(500px, 100%);
+    padding: 16px 25px;
+    border: 2px solid var(--verde);
+    border-radius: 30px;
+    background: #f9e5d2;
+    outline-color: var(--rojo);
+}
+
+.generos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.genero {
+    background: transparent;
+    border: 2px solid var(--verde);
+    color: var(--verde);
+    padding: 11px 23px;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 12px;
+}
+
+.genero.activo,
+.genero:hover {
+    background: var(--verde);
+    color: white;
+}
+
+.artistas-catalogo {
+    max-width: 1150px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.catalogo-card {
+    background: var(--verde);
+    color: white;
+    border-radius: 17px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.catalogo-card:hover {
+    transform: translateY(-6px);
+}
+
+.catalogo-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.catalogo-info {
+    padding: 20px;
+}
+
+.catalogo-info h3 {
+    font-size: 18px;
+}
+
+.catalogo-info p {
+    font-size: 12px;
+    margin: 8px 0;
+}
+
+.catalogo-info button {
+    background: var(--amarillo);
+    border: none;
+    border-radius: 25px;
+    padding: 10px 17px;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--verde);
+    margin-top: 10px;
+}
+
+/* BANNER */
+
+.banner-artistas {
+    background: var(--verde);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.banner-artistas span {
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.banner-artistas h2 {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    color: var(--amarillo);
+    font-size: clamp(35px, 5vw, 65px);
+    margin: 20px 0;
+}
+
+.boton-artistas {
+    display: inline-block;
+    background: var(--amarillo);
+    color: var(--verde);
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 800;
+    margin-top: 25px;
+}
+
+/* MODAL */
+
+.modal-artista {
+    margin: auto;
+    border: none;
+    border-radius: 20px;
+    padding: 30px;
+    width: min(500px, 90%);
+    background: var(--beige);
+}
+
+.modal-artista::backdrop {
+    background: rgba(0,0,0,.7);
+}
+
+.modal-artista img {
+    width: 100%;
+    max-height: 230px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.modal-artista h2 {
+    color: var(--rojo);
+    font-size: 32px;
+}
+
+.modal-artista p {
+    margin: 12px 0;
+    line-height: 1.6;
+}
+
+.modal-artista button {
+    background: var(--verde);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 25px;
+    margin-top: 15px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .circulos-artistas {
+        height: 320px;
+    }
+
+    .circulo {
+        width: 250px;
+        height: 250px;
+    }
+
+    .destacados-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .artistas-catalogo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .circulos-artistas {
+        height: 230px;
+    }
+
+    .circulo {
+        width: 170px;
+        height: 170px;
+    }
+
+    .circulo-amarillo span {
+        font-size: 14px;
+    }
+
+    .circulo-verde span {
+        font-size: 22px;
+    }
+
+    .destacados-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .artistas-catalogo {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .catalogo-card img {
+        height: 150px;
+    }
+
+    .hero-footer {
+        gap: 15px;
+    }
+}

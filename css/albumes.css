@@ -1,0 +1,490 @@
+
+/* SOUND - ÁLBUMES */
+
+:root {
+    --beige: #dfbc9c;
+    --verde: #087d48;
+    --amarillo: #f7ed70;
+    --rojo: #ed3218;
+}
+
+body {
+    background: var(--beige);
+}
+
+button {
+    cursor: pointer;
+}
+
+/* HERO */
+
+.albumes-hero {
+    text-align: center;
+    padding: 60px 8% 90px;
+    overflow: hidden;
+}
+
+.hero-superior {
+    display: flex;
+    justify-content: space-between;
+    color: var(--verde);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.albumes-hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(55px, 9vw, 125px);
+    font-weight: 400;
+    color: var(--rojo);
+    line-height: 1;
+    margin: 60px 0 20px;
+}
+
+.albumes-hero h1 em {
+    color: var(--verde);
+    font-style: normal;
+}
+
+.albumes-hero > p {
+    max-width: 550px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+.hero-vinilo {
+    width: min(340px, 75vw);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    margin: 45px auto;
+    background: repeating-radial-gradient(
+        circle, #111 0 6px, #333 7px 9px, #111 10px 13px
+    );
+    display: grid;
+    place-items: center;
+    animation: girarDisco 20s linear infinite;
+}
+
+.vinilo-centro {
+    width: 34%;
+    aspect-ratio: 1;
+    background: var(--rojo);
+    color: white;
+    border: 10px solid var(--amarillo);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+@keyframes girarDisco {
+    to { transform: rotate(360deg); }
+}
+
+.boton-album {
+    display: inline-block;
+    background: var(--verde);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 800;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+/* CONCEPTO */
+
+.concepto-albumes {
+    background: var(--amarillo);
+    padding: 75px 8%;
+    text-align: center;
+}
+
+.concepto-albumes > p {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: var(--verde);
+}
+
+.concepto-albumes h2,
+.titulo-seccion h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(32px, 5vw, 55px);
+    font-weight: 400;
+    color: var(--rojo);
+    margin: 20px 0 35px;
+}
+
+.concepto-circulos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-top: 45px;
+}
+
+.concepto-item {
+    width: 270px;
+    height: 270px;
+    border: 2px solid var(--verde);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin: 0 -15px;
+    transition: .3s;
+}
+
+.concepto-item:hover {
+    background: var(--verde);
+    color: white;
+}
+
+.concepto-item span {
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.concepto-item h3 {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.concepto-item p {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* EDICIONES */
+
+.ediciones {
+    padding: 90px 7%;
+}
+
+.titulo-seccion {
+    text-align: center;
+}
+
+.titulo-seccion span {
+    color: var(--verde);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.titulo-seccion p {
+    font-size: 14px;
+}
+
+.ediciones-grid {
+    max-width: 1150px;
+    margin: 60px auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 65px 40px;
+}
+
+.disco-composicion {
+    position: relative;
+    height: 270px;
+    display: flex;
+    align-items: center;
+}
+
+.disco-negro {
+    position: absolute;
+    width: 245px;
+    height: 245px;
+    border-radius: 50%;
+    right: 5%;
+    background: repeating-radial-gradient(
+        circle, #111 0 5px, #333 6px 8px, #111 9px 12px
+    );
+    transition: .4s;
+}
+
+.disco-composicion img {
+    position: relative;
+    z-index: 2;
+    width: 255px;
+    height: 255px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0,0,0,.15);
+    transition: .4s;
+}
+
+.edicion-card:hover .disco-negro {
+    transform: translateX(25px) rotate(30deg);
+}
+
+.edicion-card:hover img {
+    transform: translateX(-8px);
+}
+
+.edicion-info {
+    margin-top: 20px;
+}
+
+.edicion-info span {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--verde);
+}
+
+.edicion-info h3 {
+    font-size: 25px;
+    margin: 7px 0;
+}
+
+.edicion-info button {
+    background: transparent;
+    border: none;
+    color: var(--rojo);
+    font-size: 12px;
+    font-weight: 800;
+    padding: 10px 0;
+}
+
+/* CATÁLOGO */
+
+.catalogo-albumes {
+    background: var(--amarillo);
+    padding: 85px 7%;
+}
+
+.herramientas-albumes {
+    text-align: center;
+    margin: 30px 0;
+}
+
+#buscar-album {
+    width: min(480px, 100%);
+    padding: 15px 25px;
+    border-radius: 30px;
+    border: 2px solid var(--verde);
+    background: #fff9d5;
+}
+
+.filtros-albumes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.filtro {
+    background: transparent;
+    border: 2px solid var(--verde);
+    border-radius: 30px;
+    padding: 11px 22px;
+    color: var(--verde);
+    font-weight: 800;
+    font-size: 12px;
+}
+
+.filtro.activo,
+.filtro:hover {
+    background: var(--verde);
+    color: white;
+}
+
+.catalogo-grid {
+    max-width: 1150px;
+    margin: 45px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.album-card {
+    background: var(--verde);
+    color: white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.album-card img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.album-info {
+    padding: 18px;
+}
+
+.album-info h3 {
+    font-size: 17px;
+}
+
+.album-info p {
+    font-size: 12px;
+    margin: 8px 0;
+}
+
+.album-info button {
+    border: none;
+    border-radius: 25px;
+    padding: 10px 15px;
+    background: var(--amarillo);
+    color: var(--verde);
+    font-size: 11px;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+/* NÚMEROS */
+
+.numeros-sound {
+    padding: 90px 8%;
+    text-align: center;
+    background: var(--verde);
+    color: white;
+}
+
+.numeros-sound > p {
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.numeros-sound h2 {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    color: var(--amarillo);
+    font-size: 45px;
+    margin: 20px 0 50px;
+}
+
+.numeros-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.numeros-grid div {
+    border-top: 2px solid var(--amarillo);
+    padding: 30px 10px;
+}
+
+.numeros-grid strong {
+    display: block;
+    font-size: 65px;
+    font-weight: 800;
+}
+
+.numeros-grid span {
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* CIERRE */
+
+.albumes-cierre {
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.albumes-cierre span {
+    color: var(--verde);
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.albumes-cierre h2 {
+    font-family: 'DM Serif Display', serif;
+    color: var(--rojo);
+    font-weight: 400;
+    font-size: clamp(35px, 5vw, 65px);
+    margin: 20px 0;
+}
+
+/* MODAL */
+
+.modal-album {
+    margin: auto;
+    border: none;
+    border-radius: 20px;
+    padding: 30px;
+    width: min(500px, 90%);
+    background: var(--beige);
+}
+
+.modal-album::backdrop {
+    background: rgba(0,0,0,.7);
+}
+
+.modal-album img {
+    width: 100%;
+    max-height: 230px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.modal-album h2 {
+    color: var(--rojo);
+    font-size: 32px;
+}
+
+.modal-album p {
+    margin: 12px 0;
+}
+
+.modal-album button {
+    border: none;
+    background: var(--verde);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    margin-top: 15px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+    .ediciones-grid {
+        grid-template-columns: 1fr;
+        max-width: 550px;
+    }
+
+    .catalogo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .disco-composicion {
+        height: 210px;
+    }
+
+    .disco-composicion img {
+        width: 190px;
+        height: 190px;
+    }
+
+    .disco-negro {
+        width: 185px;
+        height: 185px;
+    }
+
+    .catalogo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .numeros-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .concepto-item {
+        margin: -10px 0;
+    }
+}

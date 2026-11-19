@@ -1,0 +1,518 @@
+/* ==============================
+   RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: #111;
+    background-color: #dfbc9c;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ==============================
+   COLORES
+================================= */
+
+:root {
+    --beige: #dfbc9c;
+    --amarillo: #f7ed70;
+    --verde: #087d48;
+    --rojo: #ed3218;
+    --marron: #a98b72;
+    --blanco: #fff;
+}
+
+
+/* ==============================
+   HEADER
+================================= */
+
+.header {
+    height: 105px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 9%;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: var(--verde);
+}
+
+.logo-main {
+    font-size: 43px;
+    font-weight: 700;
+    letter-spacing: -3px;
+}
+
+.logo-small {
+    font-size: 5px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+
+/* NAV */
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav a {
+    font-size: 20px;
+    font-weight: 800;
+
+    position: relative;
+    padding: 8px 0;
+}
+
+.nav a.activo::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: var(--rojo);
+}
+
+
+/* ==============================
+   HERO
+================================= */
+
+.hero {
+    text-align: center;
+
+    padding-top: 55px;
+}
+
+.hero-text h1 {
+    font-family: "DM Serif Display", serif;
+
+    color: var(--rojo);
+
+    font-size: 39px;
+    font-weight: 400;
+}
+
+.hero-text p {
+    color: var(--rojo);
+
+    font-size: 17px;
+    margin-top: 5px;
+}
+
+
+/* VINILO */
+
+.vinilo {
+    width: 585px;
+    height: 300px;
+
+    margin: 18px auto 0;
+
+    overflow: hidden;
+}
+
+.vinilo img {
+    width: 100%;
+    display: block;
+}
+
+
+/* ==============================
+   DESTACADO
+================================= */
+
+.destacado {
+    text-align: center;
+
+    padding: 5px 10% 80px;
+}
+
+.estrellas {
+    color: white;
+    font-size: 75px;
+
+    line-height: 70px;
+
+    letter-spacing: 15px;
+}
+
+.destacado h2,
+.artistas h2,
+.musica h2 {
+    font-family: "DM Serif Display", serif;
+
+    color: var(--rojo);
+
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.destacado h2 {
+    margin-top: -50px;
+    position: relative;
+}
+
+
+/* ARTISTA */
+
+.artista-contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 28px;
+
+    margin-top: 28px;
+}
+
+.artista-contenido img {
+    width: 260px;
+    height: 260px;
+
+    object-fit: cover;
+}
+
+.artista-info {
+    width: 450px;
+    text-align: left;
+}
+
+.artista-info p {
+    font-size: 16px;
+    line-height: 1.4;
+
+    margin-bottom: 20px;
+}
+
+
+/* BOTONES */
+
+.boton {
+    display: inline-block;
+
+    background-color: var(--verde);
+    color: white;
+
+    border-radius: 30px;
+
+    padding: 12px 22px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: 0.2s;
+}
+
+.boton:hover {
+    transform: scale(1.05);
+}
+
+
+/* ==============================
+   ARTISTAS
+================================= */
+
+.artistas {
+    background-color: var(--amarillo);
+
+    text-align: center;
+
+    padding: 35px 7% 55px;
+}
+
+.artistas-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+    max-width: 1000px;
+
+    margin: 30px auto 25px;
+}
+
+
+/* CARD */
+
+.artista-card {
+    height: 190px;
+
+    background-color: var(--verde);
+
+    border-radius: 17px;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    color: white;
+}
+
+.artista-card img {
+    width: 100%;
+    height: 125px;
+
+    object-fit: cover;
+}
+
+.artista-card div {
+    height: 65px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.artista-card h3 {
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.artista-card p {
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+
+/* EXPLORAR */
+
+.explorar {
+    padding: 12px 35px;
+}
+
+
+/* ==============================
+   MÚSICA
+================================= */
+
+.musica {
+    padding: 55px 10% 75px;
+
+    min-height: 580px;
+
+    text-align: center;
+}
+
+.albumes {
+    position: relative;
+
+    max-width: 750px;
+    height: 390px;
+
+    margin: 35px auto 0;
+}
+
+
+/* ALBUMES */
+
+.album {
+    position: absolute;
+
+    width: 205px;
+    height: 205px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.album1 {
+    left: 0;
+    top: 0;
+}
+
+.album2 {
+    left: 30px;
+    top: 210px;
+}
+
+.album3 {
+    left: 270px;
+    top: 215px;
+}
+
+.album4 {
+    left: 470px;
+    top: 0;
+}
+
+.album5 {
+    left: 205px;
+    top: 150px;
+
+    width: 145px;
+    height: 145px;
+}
+
+.album6 {
+    left: 425px;
+    top: 175px;
+
+    width: 165px;
+    height: 165px;
+}
+
+
+/* ==============================
+   FOOTER
+================================= */
+
+.footer {
+    background-color: var(--marron);
+
+    min-height: 280px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    gap: 25px;
+}
+
+.footer-logo {
+    color: var(--verde);
+}
+
+.footer p {
+    font-size: 16px;
+}
+
+
+/* REDES */
+
+.redes {
+    display: flex;
+    gap: 28px;
+}
+
+.redes img {
+    width: 40px;
+    height: 40px;
+
+    object-fit: contain;
+}
+
+
+/* ==============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 800px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+    .nav {
+        gap: 12px;
+    }
+
+    .nav a {
+        font-size: 14px;
+    }
+
+    .logo-main {
+        font-size: 32px;
+    }
+
+    .vinilo {
+        width: 90%;
+    }
+
+    .artista-contenido {
+        flex-direction: column;
+    }
+
+    .artista-info {
+        width: 80%;
+        text-align: center;
+    }
+
+    .artistas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .albumes {
+        transform: scale(0.8);
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .header {
+        height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding-top: 30px;
+    }
+
+    .hero-text h1 {
+        font-size: 30px;
+    }
+
+    .artistas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .albumes {
+        transform: scale(0.55);
+        transform-origin: top center;
+    }
+
+    .musica {
+        min-height: 500px;
+    }
+}

@@ -1,0 +1,348 @@
+
+/* =====================================
+   SOUND - RESPONSIVE DESIGN
+   ===================================== */
+
+/* AJUSTES GENERALES */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    max-width: 100%;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    min-width: 0;
+}
+
+img, video, svg {
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+}
+
+main, section, header, footer {
+    max-width: 100%;
+}
+
+h1, h2, h3, p {
+    overflow-wrap: break-word;
+}
+
+input, textarea, select {
+    max-width: 100%;
+}
+
+/* NAVEGACION COMPARTIDA */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.header .logo {
+    flex-shrink: 0;
+}
+
+.header .nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* =====================================
+   TABLET - 601px a 1024px
+   ===================================== */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    .header {
+        padding: 20px 4%;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .header .nav {
+        width: 100%;
+        gap: 18px;
+    }
+
+    .header .nav a {
+        font-size: 12px;
+    }
+
+    /* TITULOS */
+
+    h1 {
+        font-size: clamp(36px, 5vw, 65px);
+    }
+
+    h2 {
+        font-size: clamp(28px, 4vw, 48px);
+    }
+
+    /* INICIO */
+
+    .vinilo {
+        width: min(320px, 65vw);
+    }
+
+    /* ARTISTAS Y ALBUMES */
+
+    .artistas-catalogo,
+    .catalogo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* CONTACTO */
+
+    .contacto-contenedor {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* INSTAGRAM */
+
+    .instagram-contenedor {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .instagram-celular {
+        transform: rotate(0deg);
+    }
+}
+
+/* =====================================
+   CELULAR - HASTA 600px
+   ===================================== */
+
+@media (max-width: 600px) {
+
+    /* MENU */
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 18px 15px;
+        gap: 18px;
+    }
+
+    .header .logo {
+        justify-content: center;
+    }
+
+    .header .logo-main {
+        font-size: 36px;
+    }
+
+    .header .nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        gap: 10px 15px;
+    }
+
+    .header .nav a {
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    /* TEXTOS */
+
+    h1 {
+        font-size: clamp(30px, 9vw, 45px);
+        line-height: 1.1;
+    }
+
+    h2 {
+        font-size: clamp(26px, 7vw, 38px);
+        line-height: 1.15;
+    }
+
+    h3 {
+        font-size: clamp(18px, 5vw, 25px);
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    /* INICIO */
+
+    .hero {
+        padding: 45px 18px;
+        text-align: center;
+    }
+
+    .vinilo {
+        width: min(280px, 80vw);
+        margin: 30px auto;
+    }
+
+    /* ARTISTAS */
+
+    .artistas-catalogo {
+        grid-template-columns: 1fr;
+    }
+
+    /* ALBUMES */
+
+    .catalogo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* MUSICA */
+
+    .lista-tracks {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .track {
+        min-width: 0;
+        gap: 8px;
+    }
+
+    .track-info {
+        min-width: 0;
+    }
+
+    .track-info h3 {
+        font-size: 14px;
+    }
+
+    .track-info p {
+        font-size: 11px;
+    }
+
+    .track-numero {
+        font-size: 12px;
+    }
+
+    .track-duracion {
+        font-size: 11px;
+    }
+
+    /* CONTACTO */
+
+    .contacto-contenedor {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .contacto-visual {
+        min-height: 240px;
+    }
+
+    .contacto-formulario {
+        padding: 25px 20px;
+    }
+
+    .contacto-formulario input,
+    .contacto-formulario textarea,
+    .contacto-formulario select {
+        width: 100%;
+    }
+
+    /* GALERIA */
+
+    .portfolio-grid,
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* INSTAGRAM */
+
+    .instagram-seccion {
+        padding: 60px 20px;
+    }
+
+    .instagram-contenedor {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 45px;
+        text-align: center;
+    }
+
+    .instagram-texto h2 {
+        font-size: clamp(36px, 10vw, 55px);
+    }
+
+    .instagram-texto > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .instagram-celular-zona {
+        width: 100%;
+    }
+
+    .instagram-celular {
+        width: min(290px, 85vw);
+        height: 585px;
+        transform: rotate(0deg);
+    }
+
+    .instagram-estrella {
+        font-size: 70px;
+    }
+
+    .instagram-circulo {
+        width: 110px;
+        height: 110px;
+    }
+
+    /* FOOTER */
+
+    footer {
+        text-align: center;
+    }
+}
+
+/* =====================================
+   CELULARES MUY PEQUEÑOS
+   HASTA 375px
+   ===================================== */
+
+@media (max-width: 375px) {
+
+    .header .nav {
+        gap: 9px;
+    }
+
+    .header .nav a {
+        font-size: 9px;
+    }
+
+    .header .logo-main {
+        font-size: 32px;
+    }
+
+    .vinilo {
+        width: min(245px, 80vw);
+    }
+
+    .instagram-celular {
+        width: min(260px, 85vw);
+        height: 565px;
+    }
+
+    .contacto-formulario {
+        padding: 20px 15px;
+    }
+}

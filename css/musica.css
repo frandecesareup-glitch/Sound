@@ -1,0 +1,481 @@
+
+/* ===========================
+   SOUND - PÁGINA MÚSICA
+=========================== */
+
+:root {
+    --beige: #dfbc9c;
+    --verde: #087d48;
+    --amarillo: #f7ed70;
+    --rojo: #ed3218;
+    --marron: #a98b72;
+}
+
+body {
+    background: var(--beige);
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* INTRODUCCIÓN */
+
+.musica-intro {
+    text-align: center;
+    padding: 65px 20px 50px;
+}
+
+.musica-intro .subtitulo {
+    color: var(--verde);
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.musica-intro h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(35px, 5vw, 62px);
+    font-weight: 400;
+    color: var(--rojo);
+    margin: 12px 0;
+}
+
+.musica-intro > p:last-child {
+    font-size: 15px;
+}
+
+/* REPRODUCTOR */
+
+.reproductor-seccion {
+    padding: 35px 8% 100px;
+}
+
+.reproductor-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+/* VINILO GRANDE */
+
+.vinilo-zona {
+    display: flex;
+    justify-content: center;
+}
+
+.vinilo-grande {
+    width: min(440px, 100%);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background:
+        repeating-radial-gradient(
+            circle,
+            #151515 0px,
+            #151515 5px,
+            #2b2b2b 6px,
+            #101010 9px
+        );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 16px 18px 0 rgba(0,0,0,.13);
+}
+
+.vinilo-grande.girando {
+    animation: girar 5s linear infinite;
+}
+
+@keyframes girar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.etiqueta-vinilo {
+    width: 34%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--rojo);
+    border: 10px solid var(--amarillo);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.etiqueta-vinilo span {
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.etiqueta-vinilo small {
+    font-size: 10px;
+}
+
+/* PLAYER */
+
+.player-info .etiqueta {
+    display: inline-block;
+    background: var(--amarillo);
+    color: var(--verde);
+    padding: 9px 15px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.player-info h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(35px, 4vw, 55px);
+    color: var(--rojo);
+    margin-top: 22px;
+}
+
+#artista-actual {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+/* ONDA DE AUDIO */
+
+.onda {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    height: 65px;
+    margin-top: 25px;
+}
+
+.onda span {
+    display: block;
+    width: 5px;
+    height: 20px;
+    border-radius: 5px;
+    background: var(--verde);
+}
+
+.onda span:nth-child(3n) { height: 45px; }
+.onda span:nth-child(4n) { height: 30px; }
+.onda span:nth-child(5n) { height: 55px; }
+
+.onda.animada span {
+    animation: onda 0.7s ease-in-out infinite alternate;
+}
+
+.onda.animada span:nth-child(2n) {
+    animation-delay: .2s;
+}
+
+.onda.animada span:nth-child(3n) {
+    animation-delay: .4s;
+}
+
+@keyframes onda {
+    to { height: 8px; }
+}
+
+/* PROGRESO */
+
+.progreso {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 15px 0;
+}
+
+.progreso span {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.progreso input {
+    flex: 1;
+    accent-color: var(--verde);
+}
+
+/* CONTROLES */
+
+.controles {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 22px;
+}
+
+.controles button {
+    border: none;
+    background: transparent;
+    font-size: 25px;
+    color: var(--verde);
+}
+
+.controles .play-principal {
+    background: var(--verde);
+    color: white;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    font-size: 24px;
+}
+
+.player-nota {
+    font-size: 11px;
+    margin-top: 20px;
+    opacity: .7;
+}
+
+/* CATEGORÍAS */
+
+.categorias-musica {
+    background: var(--amarillo);
+    padding: 55px 8%;
+    text-align: center;
+}
+
+.categorias-musica h2,
+.canciones-seccion h2 {
+    font-family: 'DM Serif Display', serif;
+    color: var(--rojo);
+    font-size: clamp(27px, 3vw, 40px);
+    font-weight: 400;
+}
+
+.categorias-botones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.categoria {
+    border: 2px solid var(--verde);
+    background: transparent;
+    color: var(--verde);
+    border-radius: 30px;
+    padding: 12px 24px;
+    font-weight: 800;
+    font-size: 12px;
+    transition: .2s;
+}
+
+.categoria:hover,
+.categoria.activo {
+    background: var(--verde);
+    color: white;
+}
+
+/* LISTA DE CANCIONES */
+
+.canciones-seccion {
+    padding: 80px 8%;
+    max-width: 1250px;
+    margin: auto;
+}
+
+.titulo-fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.titulo-fila span {
+    color: var(--verde);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.buscador-musica {
+    width: 100%;
+    padding: 16px 22px;
+    border-radius: 30px;
+    border: 2px solid var(--verde);
+    background: #f8e5d1;
+    outline-color: var(--rojo);
+    margin-bottom: 30px;
+}
+
+.lista-tracks {
+    display: grid;
+    gap: 15px;
+}
+
+.track {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #f5ddc5;
+    padding: 15px 22px;
+    border-radius: 18px;
+    transition: .2s;
+}
+
+.track:hover {
+    transform: translateX(5px);
+    background: #f9e9d8;
+}
+
+.track-numero {
+    font-weight: 800;
+    color: var(--verde);
+    width: 25px;
+}
+
+.track-portada {
+    width: 75px;
+    height: 75px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    color: white;
+    font-weight: 800;
+    font-size: 22px;
+}
+
+.track-info {
+    flex: 1;
+}
+
+.track-info h3 {
+    font-size: 17px;
+    margin-bottom: 6px;
+}
+
+.track-info p {
+    font-size: 12px;
+}
+
+.track-duracion {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.track button {
+    border: none;
+    border-radius: 25px;
+    padding: 11px 17px;
+    background: var(--verde);
+    color: white;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.track button:hover {
+    background: var(--rojo);
+}
+
+/* BANNER */
+
+.banner-musica {
+    background: var(--verde);
+    color: white;
+    padding: 65px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    overflow: hidden;
+}
+
+.banner-musica > div:first-child {
+    max-width: 550px;
+}
+
+.banner-musica span {
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.banner-musica h2 {
+    color: var(--amarillo);
+    font-family: 'DM Serif Display', serif;
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.boton-musica {
+    display: inline-block;
+    background: var(--amarillo);
+    color: var(--verde);
+    border-radius: 30px;
+    padding: 14px 25px;
+    margin-top: 25px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.banner-disco {
+    width: 260px;
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: repeating-radial-gradient(
+        circle, #111 0 5px, #444 6px 8px, #111 9px 12px
+    );
+    border: 65px solid #191919;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+    .reproductor-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .player-info {
+        text-align: center;
+    }
+
+    .onda, .controles {
+        justify-content: center;
+    }
+
+    .banner-disco {
+        display: none;
+    }
+
+    .titulo-fila {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 550px) {
+    .track {
+        gap: 10px;
+        padding: 12px;
+        flex-wrap: wrap;
+    }
+
+    .track-portada {
+        width: 55px;
+        height: 55px;
+    }
+
+    .track-info h3 {
+        font-size: 14px;
+    }
+
+    .track-duracion {
+        display: none;
+    }
+
+    .banner-musica h2 {
+        font-size: 32px;
+    }
+}
